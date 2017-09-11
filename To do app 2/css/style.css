@@ -1,0 +1,130 @@
+/* #BA526D dark */
+/* #472E3E  the darkest */
+/* #DEDADC  grey */
+* {
+	padding: 0;
+}
+body {
+	background-color: #F2F2F2;
+	padding-top: 130px;
+	font-family: Candara;
+}
+header {
+	width: 100%;
+	height: 130px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background-color: #D4B7BC;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+	font-family: Candara;
+}
+header input {
+	width: 80%;
+	height: 50px;
+	padding: 0 20px 0 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 400;
+	background-color: #D4B7BC;
+	border: 0px;
+	box-shadow: none;
+	outline: none;
+	text-align: center;
+}
+header button {
+	width: 50px;
+	height: 50px;
+	z-index: 2;
+	border-radius: 25px;
+	background: #fff;
+	border:0px;
+	box-shadow: none;
+	outline: none;
+	margin: 0 auto;
+	font-size: 30px;
+	
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+.arrow {
+	padding-top: 10px;
+}
+button:hover svg .fill{
+	fill: #472E3E;
+}
+::-webkit-input-placeholder {
+	color: rgba(255,255,255,0.8);
+}
+.container {	
+	margin: 0 auto;
+	padding: 15px;
+	width: 90%;
+	font-size: 20px;
+}
+ul.todo li {
+	min-height: 25px;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 1px 4px rgba(44,62,80,0.15);
+	list-style-type: none;
+	margin: 0 0 10px 0;
+	color: #404040;
+	position: relative;
+	margin: 0 0 10px 0;
+	padding: 10px 100px 10px 10px;
+	
+}
+ul.todo li:last-of-type {
+	margin: 0;
+}
+.buttons {
+	width: 100px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+}
+.buttons button {
+	width: 50px;
+	height: 50px;
+	float: left;
+	border-radius: 25px;
+	background: none;
+	border:0px;
+	box-shadow: none;
+	outline: none;
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer;
+}
+svg {
+	width: 30px;
+	height: 30px;
+}
+button.complete:hover svg .fill {
+fill: #472E3E;
+}
+button.remove:hover svg .fill {
+fill: #472E3E;
+}
+button svg .fill {
+	transition: 0.6s ease;
+}
+ul.todo#completed:not(:empty) {
+	opacity: 0.5;
+	padding-top: 20px;
+	border-top: 0.7px solid;
+	border-top-color: rgba(186,186,186,1); 
+}
+/*ul.todo #completed:not(:empty):before {
+	content: '';
+	background-color: #472E3E;
+	height: 1px;
+}*/
