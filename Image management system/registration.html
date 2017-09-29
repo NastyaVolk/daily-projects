@@ -7,23 +7,25 @@
 </head>
 <body>
 	<h1>IMAGE MANAGEMENT<br> SYSTEM</h1>
-	<form action="previewer.html">
+	<form action="previewer.html" onsubmit="validatePasswords()">
 	<h1>SIGN UP</h1>
-	<input type="text" placeholder="Username" pattern="^[a-zA-Z]+$" required><br>
+	<input type="text" placeholder="Username" pattern="^[a-zA-Z]+$" required title="ENTER ONLY a-z OR A-Z CHARACHTERS!"><br>
 	<input type="email" placeholder="Email Address" required><br>
-	<input type="password" id="password1" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*[^a-zA-Z0-9]).{6,}" required><br>
-	<input type="password" id="password2" placeholder="Retype Password" required><br><br>
-	<button type="submit" onclick="return validatePasswords()">SIGN ME UP</button>	
+	<input type="password" id="password1" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*[^a-zA-Z0-9]).{6,}" required title="Password should be at least 6 characters long, at least one lowercase letter, one uppercase letter, one digit, no special symbols"><br>
+	<input type="password" id="password2" placeholder="Retype Password" required onchange="return validatePasswords()"><br><br>
+	<button type="submit">SIGN ME UP</button>	
 	</form>
 	<script type="text/javascript">
 		function validatePasswords() {
 		var password1 = document.getElementById('password1');
     	var password2 = document.getElementById('password2');
     	if (password1.value !== password2.value) {
-    		alert("Check your passwords!");
+    		alert("Check your passwords! They are not the same...");
+    		document.getElementById('password2').innerHTML = "";
     		return false;
     		}
 		}
+		validatePasswords();
 	</script>
 </body>
 </html>
