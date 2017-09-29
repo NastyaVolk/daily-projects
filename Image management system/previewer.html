@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Previewer</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/prevstyle.css">
+</head>
+<body>
+<header>
+<!--HEADER SECTION-->
+	<div class="container" style="overflow: hidden;">
+	    <div style="width: 100%;">
+	        <div style="float: left; width: 10%; padding-left: 20px; padding-top: 17px;"><img src="img/logo.png" width="45"></div>
+	        <div style="float: left; width: 50%;"><p id="welcome">Welcome to Image Previewer!</p></div>
+			<div style="float: right; width: 10%; padding-top: 17px;"><a href="index.html"><img src="img/logout.png" width="45"></a></div>
+	        <div style="float: right; width: 20%;"><p>Hi, <span id="name">Daniel!</span></p></div>
+	    </div>
+	</div>
+</header>
+<!--SEARCH SECTION-->
+	<div class="searchsection">
+		<input type="text" id="search" onclick="reload()"> 
+		<button id="btnsearch" onclick="filter()">Search</button>
+	</div>
+<!--TAG SECTION-->
+	<div class="tagsection">
+		<button class="btntag" id="1" value="all" onclick="reload()"><a>all</a></button>
+		<button class="btntag" id="2" value="nature" onclick="tagFilter(this)"><a>nature</a></button>
+		<button class="btntag" id="3" value="food" onclick="tagFilter(this)"><a>food</a></button>
+		<button class="btntag" id="4" value="animals" onclick="tagFilter(this)"><a>animals</a></button>
+		<button class="btntag" id="5" value="fashion" onclick="tagFilter(this)"><a>fashion</a></button>
+		<button class="btntag" id="6" value="interiors" onclick="tagFilter(this)"><a>interiors</a></button>
+	</div>
+<!--IMAGE PREVIEW SECTION-->
+	<div class="gallery" id="gal">
+		<a><img id="add" class="add" src="img/camera.png" height="180"></a>
+		<div id="nature"><img class="pic"  id="nature" src="https://kaboompics.com/cache/0/1/4/5/0/01450951c7190cf77329aba6347a4b2756fda42d.jpeg?version=v17"></div>
+		<div id="animals"><img id="animals" src="https://kaboompics.com/cache/3/2/9/5/c/3295cc6684e1c2bfb9fab791e489f1ae7fa25fbe.jpeg?version=v17"></div>
+		<div id="nature"><img id="nature" src="https://kaboompics.com/cache/d/4/3/5/d/d435d631329e39e612431b7b02efa29bdbde4144.jpeg?version=v17"></div>
+		<div id="food"><img id="food" src="https://kaboompics.com/cache/c/4/d/a/8/c4da85f5e9011268c05ffb8b946455968636f758.jpeg?version=v17"></div>
+		<div id="animals"><img id="animals" src="https://kaboompics.com/cache/2/9/9/8/0/29980274144860657144bf0db100d0c0b242f832.jpeg?version=v17"></div>
+		<div id="interiors"><img id="interiors" src="https://kaboompics.com/cache/5/f/8/1/5/5f81585a2494cc2a96bca4ef7a9c9d5d714c22fa.jpeg?version=v17"></div>
+		<div id="food"><img id="food" src="https://kaboompics.com/cache/3/5/a/f/1/35af1e8953ac02458fb4e4cb5fc267ae71482099.jpeg?version=v17"></div>
+		<div id="interiors"><img id="interiors" src="https://kaboompics.com/cache/e/d/3/e/6/ed3e632853733bb9a27f47347bf745e802c5cd1f.jpeg?version=v17"></div>
+		<div id="fashion"><img id="fashion" src="https://kaboompics.com/cache/b/5/e/8/9/b5e8908ead2e3aa061415650c21e51d79ce60e1e.jpeg?version=v17"></div>
+	</div>
+<!--MODAL-->	
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="close">&times;</span>
+		<div style="overflow: hidden;">
+			<div style="width: 100%;">
+				<div class="addimg" style="float: left; width: 50%;">
+				<p>ADD IMAGE</p>	
+				<div class="drag" style="height: 420px;">
+					<p>Drag in your media</p>
+					<p>Find media on your hard drive, then drag<br> them in to automatically upload.</p>
+					<img src="img/download.png" width="200px">
+				</div>
+				</div>
+				<div class="addinf" style="float: right; width: 50%;">
+					<p>ADD INFO</p>
+					<p>Name your media</p>
+					<input type="text" placeholder="Media name" style="width: 500px">
+					<p>Add tags</p>
+					<input type="text" placeholder="Write a tag..." style="width: 400px">
+					<button id="addtag" style="width: 100px">Add tag</button>
+					<p>Add description</p>
+					<input type="text" placeholder="Description" style="width: 500px">
+					<center><button id="publish">PUBLISH</button></center>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--FILTER-->
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

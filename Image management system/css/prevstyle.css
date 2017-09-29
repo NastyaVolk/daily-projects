@@ -1,0 +1,68 @@
+.container {
+	background-color: #fff;
+	box-shadow: 0 0 2em rgba(0,0,0,0.2);
+	border-radius: 0.25em;
+	margin-bottom: 20px;
+}
+#search {
+	width: 90%;
+}
+#btnsearch {
+	background-color: #fff;
+	height: 45px;
+}
+#btnsearch:hover {
+	color: #ccc;
+}
+.btntag {
+	background-color: #000;
+}
+.searchsection {
+	margin-bottom: 20px;
+}
+.tagsection {
+	margin-bottom: 20px;
+}
+.gallery {
+	padding: 1px;
+	font-size: 0;
+	flex-wrap: wrap; 
+	flex-direction: row; 
+	display: flex; 
+}
+.gallery div {
+	flex: auto; 
+	width: 237px;
+	margin: 10px;
+	height: 180px;
+}
+.gallery div img {
+	width: 100%;
+	height: auto;
+}
+.gallery:hover img {
+	opacity: 0.4;
+	transition: .8s opacity;
+}
+.gallery:hover img:hover {
+	opacity: 1;
+	transition: .8s opacity;
+}
+.add {
+	margin-right: 10px;
+}
+.drag {
+	text-align: center;
+	border: 2px solid #ccc;
+	border-style: dashed;
+	margin-right: 20px;
+	padding: 5px;
+}
+#addtag {
+	height: 50px;
+}
+#publish {
+	height: 50px;
+	margin-top: 15px;
+	margin-right: 15px;
+}
