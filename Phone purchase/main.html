@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Phone purchase</title>
+</head>
+<body>
+<script>
+var bankBalance = 1000;
+var spendingThreshold = 400;
+var phonePrice = 100;
+var accessoryPrice = 50;
+var totalPrice = 0;
+var phones = 0;
+var accessories = 0;
+const taxRate = 0.5;
+bankBalance = prompt("How much money do ypu have on your bank account?");
+function calculateTax(totalPrice) {
+	return totalPrice * taxRate;
+}
+function format(totalPrice) {
+	return "$" + totalPrice.toFixed(2);
+}
+while (totalPrice < bankBalance) {
+	//buying new phone
+	phones += 1;
+	totalPrice += phonePrice;
+	//can we afford the accessory?
+	if(totalPrice < spendingThreshold) {
+		console.log("I can afford an accessory!");
+		accessories += 1;
+		totalPrice += accessoryPrice;
+	}
+}
+totalPrice += calculateTax(totalPrice);
+console.log("Total price of purchase: ");
+console.log(format(totalPrice));
+//can you actually afford this purchase?
+if(totalPrice > bankBalance) {
+	console.log("You can't afford this purchase :( ");
+}
+</script>
+</body>
+</html>
